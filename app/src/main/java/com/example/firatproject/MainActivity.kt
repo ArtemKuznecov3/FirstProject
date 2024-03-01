@@ -34,8 +34,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             FiratProjectTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background)
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                )
                 {
                     Column {
 
@@ -47,10 +49,12 @@ class MainActivity : ComponentActivity() {
 
                 }
 
-                }
             }
         }
-    } /** Поправить табуляция, выровнить ковычки*/
+    }
+}
+
+/** Поправить табуляция, выровнить ковычки*/
 
 
 @Composable
@@ -58,22 +62,25 @@ fun InfoCard(
     title: String,
     sum: String
 
-){
+) {
 
-    Card (modifier= Modifier.padding(16.dp)) { //круглая карта в которой через падинг мы меняем отступы//
-        Column(modifier= Modifier.padding(16.dp)){
+    Card(modifier = Modifier.padding(16.dp)) { //круглая карта в которой через падинг мы меняем отступы//
+        Column(modifier = Modifier.padding(16.dp)) {
             Text(text = title, fontWeight = FontWeight.Bold)
             Spacer(modifier = Modifier.size(16.dp)) //отступы между строк//
             Text(text = "Абонентская плата")
-            Text(text = "от $sum",fontWeight= FontWeight.ExtraLight)
+            Text(text = "от $sum", fontWeight = FontWeight.ExtraLight)
             Divider()     //полоска//
             Spacer(modifier = Modifier.size(16.dp))
             Text(text = "Палата за подключение")
-            Text(text = "от $sum",fontWeight= FontWeight.ExtraLight)
-    } /** Поправить табуляция, выровнить ковычки*/
-    } /** Поправить табуляция, выровнить ковычки*/
+            Text(text = "от $sum", fontWeight = FontWeight.ExtraLight)
+        }
+        /** Поправить табуляция, выровнить ковычки*/
+    }
+    /** Поправить табуляция, выровнить ковычки*/
 
 }
+
 @Composable
 fun InfoRegion() {
     Card(modifier = Modifier.padding(16.dp)) { //круглая карта в которой через падинг мы меняем отступы//
@@ -82,22 +89,32 @@ fun InfoRegion() {
             Spacer(modifier = Modifier.size(16.dp)) //отступы между строк//
             Row {
                 Text(text = "Выберите регион")
-                Icon (Icons.Default.KeyboardArrowRight,contentDescription = null) //стрелочка//
-            } /** Поправить табуляция, выровнить ковычки*/
+                Icon(Icons.Default.KeyboardArrowRight, contentDescription = null) //стрелочка//
+            }
+            /** Поправить табуляция, выровнить ковычки*/
 
-        } /** Поправить табуляция, выровнить ковычки*/
-        } /** Поправить табуляция, выровнить ковычки*/
-} /** Поправить табуляция, выровнить ковычки*/
+        }
+        /** Поправить табуляция, выровнить ковычки*/
+    }
+    /** Поправить табуляция, выровнить ковычки*/
+}
+
+/** Поправить табуляция, выровнить ковычки*/
 
 @Composable
 fun Content() {
     Card(modifier = Modifier.padding(16.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = "Подключите опцию <<Любимый межгород>>по направлению, в котором" +
-                    " Вы часто звоните, и все звонки в этом направоении будут стоить для вас" +
-                    " 1,5 руб. за минуту.В качестве бонуса все звонки за пределы Вашего населеного" +
-                    " пункта по области (или Республике) будут стоить также 1,50 руб./мин.Вы можете " +
-                    "выбрать несколько любимых направлений. ")
-          } /** Поправить табуляция, выровнить ковычки*/
-          } /** Поправить табуляция, выровнить ковычки*/
-        } /** Поправить табуляция, выровнить ковычки*/
+            Text(
+                text = "Подключите опцию <<Любимый межгород>>по направлению, в котором" +
+                        " Вы часто звоните, и все звонки в этом направоении будут стоить для вас" +
+                        " 1,5 руб. за минуту.В качестве бонуса все звонки за пределы Вашего населеного" +
+                        " пункта по области (или Республике) будут стоить также 1,50 руб./мин.Вы можете " +
+                        "выбрать несколько любимых направлений. "
+            )
+        }
+        /** Поправить табуляция, выровнить ковычки*/
+    }
+    /** Поправить табуляция, выровнить ковычки*/
+}
+/** Поправить табуляция, выровнить ковычки*/
